@@ -5,6 +5,7 @@ This package implements all functions (not all) which are required to convert GI
 
 ## Installation
 Get package: ```go get github.com/sizeofint/webp-animation```
+
 dependencies:
  - libraries: libwebp (0.6.1), giflib 5.1
  - tools: pkg-config
