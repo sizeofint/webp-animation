@@ -1,5 +1,5 @@
 # webp-animation
-Binding to **libwebp** and **giflib** library (https://github.com/webmproject/libwebp, https://github.com/rcancro/giflib)
+Golang binding to **libwebp** and **giflib** library (https://github.com/webmproject/libwebp, https://github.com/rcancro/giflib)
 This package implements all functions (not all) which are required to convert GIF to WEBP animation, especially the functions that were used for this example: https://github.com/webmproject/libwebp/blob/0.6.1/examples/gif2webp.c
 
 
