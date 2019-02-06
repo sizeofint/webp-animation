@@ -35,6 +35,118 @@ type WebPConfig C.WebPConfig
 type WebPAnimEncoderOptions C.WebPAnimEncoderOptions
 type WebPData C.WebPData
 
+func (webpCfg *WebPConfig) SetLossless(v int) {
+	((*C.WebPConfig)(webpCfg)).lossless = (C.int)(v)
+}
+
+func (webpCfg WebPConfig) GetLossless() int {
+	return int(((C.WebPConfig)(webpCfg)).lossless)
+}
+
+func (webpCfg *WebPConfig) SetMethod(v int) {
+	((*C.WebPConfig)(webpCfg)).method = (C.int)(v)
+}
+
+func (webpCfg *WebPConfig) SetImageHint(v WebPImageHint) {
+	((*C.WebPConfig)(webpCfg)).image_hint = (C.WebPImageHint)(v)
+}
+
+func (webpCfg *WebPConfig) SetTargetSize(v int) {
+	((*C.WebPConfig)(webpCfg)).target_size = (C.int)(v)
+}
+
+func (webpCfg *WebPConfig) SetTargetPSNR(v float32) {
+	((*C.WebPConfig)(webpCfg)).target_PSNR = (C.float)(v)
+}
+
+func (webpCfg *WebPConfig) SetSegments(v int) {
+	((*C.WebPConfig)(webpCfg)).segments = (C.int)(v)
+}
+
+func (webpCfg *WebPConfig) SetSnsStrength(v int) {
+	((*C.WebPConfig)(webpCfg)).sns_strength = (C.int)(v)
+}
+
+func (webpCfg *WebPConfig) SetFilterStrength(v int) {
+	((*C.WebPConfig)(webpCfg)).filter_strength = (C.int)(v)
+}
+
+func (webpCfg *WebPConfig) SetFilterSharpness(v int) {
+	((*C.WebPConfig)(webpCfg)).filter_sharpness = (C.int)(v)
+}
+
+func (webpCfg *WebPConfig) SetAutofilter(v int) {
+	((*C.WebPConfig)(webpCfg)).autofilter = (C.int)(v)
+}
+
+func (webpCfg *WebPConfig) SetAlphaCompression(v int) {
+	((*C.WebPConfig)(webpCfg)).alpha_compression = (C.int)(v)
+}
+
+func (webpCfg *WebPConfig) SetAlphaFiltering(v int) {
+	((*C.WebPConfig)(webpCfg)).alpha_filtering = (C.int)(v)
+}
+
+func (webpCfg *WebPConfig) SetPass(v int) {
+	((*C.WebPConfig)(webpCfg)).pass = (C.int)(v)
+}
+
+func (webpCfg *WebPConfig) SetShowCompressed(v int) {
+	((*C.WebPConfig)(webpCfg)).show_compressed = (C.int)(v)
+}
+
+func (webpCfg *WebPConfig) SetPreprocessing(v int) {
+	((*C.WebPConfig)(webpCfg)).preprocessing = (C.int)(v)
+}
+
+func (webpCfg *WebPConfig) SetPartitions(v int) {
+	((*C.WebPConfig)(webpCfg)).partitions = (C.int)(v)
+}
+
+func (webpCfg *WebPConfig) SetPartitionLimit(v int) {
+	((*C.WebPConfig)(webpCfg)).partition_limit = (C.int)(v)
+}
+
+func (webpCfg *WebPConfig) SetEmulateJpegSize(v int) {
+	((*C.WebPConfig)(webpCfg)).emulate_jpeg_size = (C.int)(v)
+}
+
+func (webpCfg *WebPConfig) SetThreadLevel(v int) {
+	((*C.WebPConfig)(webpCfg)).thread_level = (C.int)(v)
+}
+
+func (webpCfg *WebPConfig) SetLowMemory(v int) {
+	((*C.WebPConfig)(webpCfg)).low_memory = (C.int)(v)
+}
+
+func (webpCfg *WebPConfig) SetNearLossless(v int) {
+	((*C.WebPConfig)(webpCfg)).near_lossless = (C.int)(v)
+}
+
+func (webpCfg *WebPConfig) SetExact(v int) {
+	((*C.WebPConfig)(webpCfg)).exact = (C.int)(v)
+}
+
+func (webpCfg *WebPConfig) SetUseDeltaPalette(v int) {
+	((*C.WebPConfig)(webpCfg)).use_delta_palette = (C.int)(v)
+}
+
+func (webpCfg *WebPConfig) SetUseSharpYuv(v int) {
+	((*C.WebPConfig)(webpCfg)).use_sharp_yuv = (C.int)(v)
+}
+
+func (webpCfg *WebPConfig) SetAlphaQuality(v int) {
+	((*C.WebPConfig)(webpCfg)).alpha_quality = (C.int)(v)
+}
+
+func (webpCfg *WebPConfig) SetFilterType(v int) {
+	((*C.WebPConfig)(webpCfg)).filter_type = (C.int)(v)
+}
+
+func (webpCfg *WebPConfig) SetQuality(v float32) {
+	((*C.WebPConfig)(webpCfg)).quality = (C.float)(v)
+}
+
 func (wpd WebPData) GetBytes() []byte {
 	return C.GoBytes(unsafe.Pointer(((C.WebPData)(wpd)).bytes), (C.int)(((C.WebPData)(wpd)).size))
 }
@@ -45,6 +157,26 @@ func (encOptions *WebPAnimEncoderOptions) GetAnimParams() WebPMuxAnimParams {
 
 func (encOptions *WebPAnimEncoderOptions) SetAnimParams(v WebPMuxAnimParams) {
 	((*C.WebPAnimEncoderOptions)(encOptions)).anim_params = (C.WebPMuxAnimParams)(v)
+}
+
+func (encOptions *WebPAnimEncoderOptions) SetMinimizeSize(v int) {
+	((*C.WebPAnimEncoderOptions)(encOptions)).minimize_size = (C.int)(v)
+}
+
+func (encOptions *WebPAnimEncoderOptions) SetKmin(v int) {
+	((*C.WebPAnimEncoderOptions)(encOptions)).kmin = (C.int)(v)
+}
+
+func (encOptions *WebPAnimEncoderOptions) SetKmax(v int) {
+	((*C.WebPAnimEncoderOptions)(encOptions)).kmax = (C.int)(v)
+}
+
+func (encOptions *WebPAnimEncoderOptions) SetAllowMixed(v int) {
+	((*C.WebPAnimEncoderOptions)(encOptions)).allow_mixed = (C.int)(v)
+}
+
+func (encOptions *WebPAnimEncoderOptions) SetVerbose(v int) {
+	((*C.WebPAnimEncoderOptions)(encOptions)).verbose = (C.int)(v)
 }
 
 func (wmap WebPMuxAnimParams) GetBgcolor() uint32 {
