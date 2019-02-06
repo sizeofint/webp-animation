@@ -16,3 +16,5 @@ In gifdec.go check C compiler flag configurations and replace by correct values,
 // #cgo linux LDFLAGS: -L/usr/lib/x86_64-linux-gnu -lgif
 ```
 
+## Implementations
+[gif-to-webp](https://github.com/sizeofint/gif-to-webp "Golang convert GIF to WEBP") library based on this library
