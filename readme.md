@@ -19,7 +19,7 @@ dependencies:
 - libraries: libwebp (0.6.1), giflib 5.1
 
 
-Package provides prebuilt dependencies for Linux, but if you want rebuild by your own, run [deps/build-deps-linux.sh](deps/build-deps-linux.sh)  
+Package provides prebuilt dependencies for Linux, but if you want to rebuild by your own, run [deps/build-deps-linux.sh](deps/build-deps-linux.sh)  
   
 
 
