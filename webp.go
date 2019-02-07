@@ -1,7 +1,9 @@
 package webpanim
 
 /*
-#cgo pkg-config: libwebp libwebpmux
+#cgo linux CFLAGS: -I${SRCDIR}/deps/linux/include
+#cgo linux CXXFLAGS: -I${SRCDIR}/deps/linux/include
+#cgo linux LDFLAGS: -L${SRCDIR}/deps/linux/lib -lwebp -lwebpmux
 #include "webp.hpp"
 */
 import "C"
