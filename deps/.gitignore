@@ -1,4 +1,6 @@
 build/
 libwebp/
 giflib/
+zlib/
+libpng/
 dep-source/
