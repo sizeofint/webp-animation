@@ -22,4 +22,6 @@ Package provides prebuilt dependencies for Linux, but if you want to rebuild by 
 
 ## Implementations
 
-[gif-to-webp](https://github.com/sizeofint/gif-to-webp  "Golang convert GIF to WEBP") library based on this library
+[gif-to-webp](https://github.com/sizeofint/gif-to-webp  "Golang convert gif to webp") Convert gif to webp 
+
+[png-to-webp-animation](https://github.com/sizeofint/png-to-webp-animation  "Create webp animation from png files") Create webp animation from png files
