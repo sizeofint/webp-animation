@@ -186,7 +186,7 @@ func (wmap WebPMuxAnimParams) GetBgcolor() uint32 {
 }
 
 func (wmap *WebPMuxAnimParams) SetBgcolor(v uint32) {
-	(*C.WebPMuxAnimParams)(wmap).bgcolor = (C.uint32_t)(v)
+	((*C.WebPMuxAnimParams)(wmap)).bgcolor = (C.uint32_t)(v)
 }
 
 func (wmap *WebPMuxAnimParams) SetLoopCount(v int) {
