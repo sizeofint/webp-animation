@@ -1,4 +1,6 @@
-
+⚠Before using this library read text below👇  
+This library is direct binding to libwebp 0.6, originally created to convert gif animations to webp.  
+Recently I created more generic and golang language friendly version to make webp animations supporting image.Image interface which will help to create webp animation not only from gif animations but  also from any image source that you will get in image.Image interface. so I highly recommend to use the [new version](https://github.com/sizeofint/webpanimation)
 # webp-animation
 
 Golang binding to **libwebp**, **libpng** and **giflib** library
